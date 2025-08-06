@@ -1,0 +1,132 @@
+{
+    "trending": [
+        {
+            "title": "Sahiba",
+            "artist": "Aditya Rikhari",
+            "filename": "Sahiba.mp3",
+            "cover": "/Cover-Image/Trending/Sahiba.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Jab Se Tere Naina",
+            "artist": "Monty Sharma, Shaan",
+            "filename": "Jab se tere naina.mp3",
+            "cover": "/Cover-Image/Trending/Jab se Tere naina.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Paro",
+            "artist": "Aditya Rikhari",
+            "filename": "Paro.mp3",
+            "cover": "/Cover-Image/Trending/Paro.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Ishq hai",
+            "artist": "Anuragg Saikia",
+            "filename": "Ishq hai.mp3",
+            "cover": "/Cover-Image/Trending/Ishq hai.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Mann Mera",
+            "artist": "Gajendra verma",
+            "filename": "Man Mera.mp3",
+            "cover": "/Cover-Image/Trending/Man Mera.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Ashiq Tera",
+            "artist": "Sohail Sen",
+            "filename": "Ashiq Tera.mp3",
+            "cover": "/Cover-Image/Trending/Ashiq Tera.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "juggrafiya",
+            "artist": "Udit Narayan",
+            "filename": "juggraafiya.mp3",
+            "cover": "/Cover-Image/Trending/juggraafiya.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Tu hi Mera",
+            "artist": "Pritam, Shafqat Amanat Ali",
+            "filename": "Tu hi mera.mp3",
+            "cover": "/Cover-Image/Trending/Tu hi mera.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Tu jaane na",
+            "artist": "Atif Aslam, Pritam",
+            "filename": "Tu Jaane Na.mp3",
+            "cover": "/Cover-Image/Trending/Tu Jaane Na.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Bheegi Bheegi",
+            "artist": "Heeral Chhatralia",
+            "filename": "Bheegi Bheegi.mp3",
+            "cover": "/Cover-Image/Trending/Bheegi Bheegi.jpeg",
+            "folder": "songs/trending"
+        },
+        {
+            "title": "Na kajre ki Dhar",
+            "artist": "Jalraj",
+            "filename": "Na Kajre ki Dhar.mp3",
+            "cover": "/Cover-Image/Trending/Na kajre ki Dhar.jpeg",
+            "folder": "songs/trending"
+        }
+    ],
+    "popular": [
+        {
+            "title": "Aye Musht E Khaak",
+            "artist": "Shani Arshad",
+            "filename": "Aye Musht E Khaak.mp3",
+            "cover": "/Cover-Image/Popular/Aye Musht E Khaak.webp",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Jhol",
+            "artist": "Sairah",
+            "filename": "Jhol.mp3",
+            "cover": "/Cover-Image/Popular/Jhol.jpg",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Khaani",
+            "artist": "Rahat Fateh Ali Khan",
+            "filename": "Khaani.mp3",
+            "cover": "/Cover-Image/Popular/Khaani.webp",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Khuda aur Mohhbhat",
+            "artist": "Rahat Fateh Ali Khan",
+            "filename": "Khuda aur mohhbhat.mp3",
+            "cover": "/Cover-Image/Popular/Khuda aur mohhbhat.jpg",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Mushk",
+            "artist": "Ali Zafar",
+            "filename": "Mushk.mp3",
+            "cover": "/Cover-Image/Popular/Mushk.webp",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Pal Pal",
+            "artist": "Afusic",
+            "filename": "Pal Pal.mp3",
+            "cover": "/Cover-Image/Popular/Pal Pal.webp",
+            "folder": "songs/Popular"
+        },
+        {
+            "title": "Ruposh",
+            "artist": "Wajahi Farooki",
+            "filename": "Ruposh.mp3",
+            "cover": "/Cover-Image/Popular/Ruposh.webp",
+            "folder": "songs/Popular"
+        }
+    ]
+}

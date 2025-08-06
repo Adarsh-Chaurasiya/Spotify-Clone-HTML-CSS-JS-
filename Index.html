@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Listen to Trending & Popular Songs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <!-- left: logo -->
+        <div class="nav-left">
+            <!-- spotify-icon -->
+            <div class="logo invert"><img src="/Assets/logo.svg" width="35" alt="Spotify-logo"></div>
+            <!-- home-button  -->
+            <div class="humburger invert"><img src="/Assets/Humburger.webp" alt="Menu" width="25"></div>
+            <button class="icon-button ">
+                <img src="/Assets/18-189128_png-file-home-vector-icon-png-clipart.png" alt="Home"
+                    class="icon-image invert">
+            </button>
+            <!-- search-button  -->
+            <div class="search-warp">
+                <form class="search-form" id="SearchForm">
+                    <button type="button" class="search-btn" id="searchToggle">
+                        <img src="/Assets/search-icon-png-5.png" alt="search-btn" class="icon-search invert ">
+                    </button>
+                    <input type="text" placeholder="What do you want to play?" class="search-input" id="SearchInput">
+                    <div id="searchMessage" style="color:rgb(254, 254, 254); font-size: 13px; margin-top: 3px;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- right: logo -->
+        <div class="nav-right">
+
+            <a href="#" class="nav-link">Premium</a>
+            <a href="#" class="nav-link">Support</a>
+            <a href="#" class="nav-link">Download</a>
+
+            <span class="divider"></span>
+            <a href="#" class="nav-link install-link">
+                <img src="/Assets/D.png" alt="Download icon" class="install-icon invert" width="20">
+                Install App
+            </a>
+            <a href="#" class="nav-link">Sign up</a>
+            <a href="#" class="login-btn">Log in</a>
+        </div>
+
+    </header>
+
+
+    <!-- Cantainer  -->
+    <div class="cantainer flex">
+
+        <div class="left border bg-color">
+            <div class="close invert">
+                <img src="/Assets/close.png" alt="close">
+            </div>
+            <div class="library">Your Library </div>
+
+            <!-- scrollable list  -->
+
+            <div class="songlist">
+                <ul>
+                </ul>
+            </div>
+
+            <footer>
+                <div>
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                            rel="noopener">Cookies</a>
+                    </div>
+                </div>
+                <div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                </div>
+                <div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                </div>
+
+            </footer>
+        </div>
+
+
+        <!-- right-Cantainer  -->
+        <div class="right border right-Cantainer">
+
+
+
+            <!-- Trending-song  -->
+            <div class="trending-songs">
+                <h2>Trending Songs</h2>
+            </div>
+            <div class="card-cantainer" id="trending-cantainer"></div>
+
+
+            <!-- Popular-song  -->
+            <div class="trending-songs popular-songs">
+                <h2>Popular Songs</h2>
+            </div>
+            <div class="card-cantainer" id="Popular-cantainer">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- playbar   -->
+    <div class="playbar">
+        <div class="abovebar">
+            <div class="seekbar">
+                <div class="circle"></div>
+            </div>
+            <div class="songinfo"></div>
+
+            <div class="playyy">
+                <img src="/Assets/previous.png" alt="previous" width="18" class="invert" id="previous">
+                <img src="/Assets/Pause-2.png" alt="pause" width="35" class="invert" id="pause">
+                <img src="/Assets/play.png" alt="play" width="35" class=" invert" id="play-song">
+                <img src="/Assets/next-button.png" alt="next" width="18" class=" Next  invert" id="next">
+            </div>
+
+            <div class="aaaaa">
+                <div class="songtime">
+                </div>
+                <div class="volume invert">
+                    <img src="/Assets/volume.png" alt="volume" width="35">
+                    <input type="range" name="volume" class=" range invert" min="0" max="100" value="50">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+
+</html>
