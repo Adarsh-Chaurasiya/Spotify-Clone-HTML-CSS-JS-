@@ -90,7 +90,7 @@ function searchCard(text) {
 
 // remove Highlight 
 function clearHighlights() {
-function clearHighlights() {
+
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
@@ -102,7 +102,6 @@ function clearHighlights() {
     songEl.innerHTML = songEl.textContent;
     artistEl.innerHTML = artistEl.textContent;
   });
-}
 }
 
 //  Show error in search box itself
@@ -133,43 +132,48 @@ let CrrFolder;
 
 async function getSongs(folder) {
   CrrFolder = folder;
-  let a = await fetch(`http://127.0.0.1:3000/${folder}/`)
-  let response = await a.text();
-  // console.log(response)
+  
 
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  songs = []
+  // Load songs.json file
+  const res = await fetch("songs.json");
+  const data = await res.json();
 
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`/${folder}/`)[1])
-    }
-  }
+  // Combine all song arrays (trending + popular)
+  const allSongs = [...data.trending, ...data.popular];
 
-  // Show all the song in playlist 
-  let songUL = document.querySelector(".songlist ul");
+  // Filter songs that match the folder
+  songs = allSongs
+    .filter(song => song.folder.toLowerCase() === folder.toLowerCase())
+    .map(song => song.filename);
+
+  // Show all songs in playlist
+  const songUL = document.querySelector(".songlist ul");
   songUL.innerHTML = "";
-  for (const song of songs) {
-    songUL.innerHTML = songUL.innerHTML + `<li  onclick="playMusic('${song}')">  
-                  <img src="/Assets/Musiccccccccc.png" class="invert music" alt="">
-                <div class="artist">
-                    <div> ${song.replaceAll("%20", " ")} </div>
-                </div>
-                <div class="playnow">
-                    <span>Play Now</span>
-                  <img src="/Assets/play.png" width="18px" class="play-bttn invert" alt=""> </li>`;
-  }
 
+  songs.forEach(song => {
+    songUL.innerHTML += `
+      <li onclick="playMusic('${song}')">  
+        <img src="Assets/Musiccccccccc.png" class="invert music" alt="">
+        <div class="artist">
+          <div>${song.replaceAll("%20", " ")}</div>
+        </div>
+        <div class="playnow">
+          <span>Play Now</span>
+          <img src="Assets/play.png" width="18px" class="play-bttn invert" alt="">
+        </div>
+      </li>`;
+  });
+
+  // Add click event for each <li>
   Array.from(songUL.getElementsByTagName("li")).forEach(e => {
     e.addEventListener("click", () => {
       playMusic(e.querySelector(".artist").firstElementChild.innerHTML.trim());
     });
   });
-
 }
+
+
+
 
 let currentSong = new Audio();
 
@@ -190,7 +194,7 @@ function formatTime(seconds) {
 
 
 const playMusic = (track) => {
-  currentSong.src = `/${CrrFolder}/` + track
+  currentSong.src = `${CrrFolder}/` + track
 
   currentSong.play();
 
@@ -208,7 +212,7 @@ const playMusic = (track) => {
 async function main() {
 
   // Get the  list of All songs 
-  await getSongs("songs/trending");
+  await getSongs("Songs/trending");
 
   document.querySelector(".songinfo").innerHTML = decodeURI(songs[0]);
   document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
@@ -360,8 +364,8 @@ document.querySelector(".volume > img").addEventListener("click", e => {
 fetch("songs.json")
   .then(res => res.json())
   .then(data => {
-    renderSongs(data.trending, "trending-cantainer");
-    renderSongs(data.popular, "Popular-cantainer");
+    renderSongs(data.trending, "trending-container");
+    renderSongs(data.popular, "Popular-container");
   })
   .catch(err => {
     console.error("Error loading songs.json", err);
