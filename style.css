@@ -258,7 +258,7 @@ footer a {
     overflow-x: auto;
 }
 
-.card-cantainer {
+.card-container {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -266,7 +266,7 @@ footer a {
     scrollbar-width: none;
 }
 
-.card-cantainer::-webkit-scrollbar {
+.card-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -323,7 +323,7 @@ footer a {
 
 /* play-button  */
 
-.img-cantainer {
+.img-container {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
